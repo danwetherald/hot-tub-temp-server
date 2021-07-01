@@ -33,10 +33,10 @@ app.get(
   express.json({ type: "application/json" }),
   async (req, res) => {
     try {
-      const tempature = await getTemp()
+      const temperature = await getTemp()
 
       res.send({
-        tempature
+        temperature
       })
     } catch (err) {
       res.sendStatus(500)
