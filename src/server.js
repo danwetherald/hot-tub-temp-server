@@ -29,7 +29,7 @@ let getTemp = () => {
 app.get(
   "/data",
   express.json({ type: "application/json" }),
-  async (req: any, res: any) => {
+  async (req, res) => {
     const tempature = getTemp()
 
     res.send({
