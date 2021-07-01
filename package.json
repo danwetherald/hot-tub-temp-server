@@ -4,6 +4,7 @@
   "main": "src/server.js",
   "license": "MIT",
   "dependencies": {
-    "ds18x20": "^0.2.0"
+    "ds18x20": "^0.2.0",
+    "express": "^4.17.1"
   }
 }
