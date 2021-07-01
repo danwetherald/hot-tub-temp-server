@@ -6,6 +6,12 @@ let main = () => {
 
     sensor.list(function (err, listOfDeviceIds) {
       console.log(listOfDeviceIds)
+
+      if (listOfDeviceIds.length > 0) {
+        sensor.get(listOfDeviceIds[0], function (err, temp) {
+          console.log(temp);
+        })
+      }
     })
   })
 }
