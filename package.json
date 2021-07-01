@@ -1,0 +1,9 @@
+{
+  "name": "hot-tub-temp-server",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "license": "MIT",
+  "dependencies": {
+    "ds18x20": "^0.2.0"
+  }
+}
