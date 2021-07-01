@@ -1,10 +1,10 @@
 const sensor = require("ds18x20")
 
-let main = async () => {
+let main = () => {
   try {
-    await sensor.loadDriver()
+    sensor.loadDriver()
 
-    const sensors = await sensor.list()
+    const sensors = sensor.list()
 
     console.log(sensors)
 
