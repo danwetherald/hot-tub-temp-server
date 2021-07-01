@@ -9,7 +9,9 @@ let main = () => {
 
       if (listOfDeviceIds.length > 0) {
         sensor.get(listOfDeviceIds[0], function (err, temp) {
-          console.log(temp);
+          const fahrenheit = (temp * 1.8) + 32
+
+          console.log(`${fahrenheit}°F`)
         })
       }
     })
