@@ -5,17 +5,19 @@ const app = express()
 
 const port = 8000
 
+const padding = 2
+
 let getTemp = () => {
   return new Promise((resolve, reject) => {
-    sensor.isDriverLoaded(function (err, isLoaded) {
+    sensor.isDriverLoaded(function (err, _isLoaded) {
       if (err) reject(err)
 
       sensor.list(function (err, listOfDeviceIds) {
         if (err) reject(err)
 
         if (listOfDeviceIds.length > 0) {
-          sensor.get(listOfDeviceIds[0], function (err, temp) {
-            const fahrenheit = (temp * 1.8) + 32
+          sensor.get(listOfDeviceIds[0], function (_err, temp) {
+            const fahrenheit = Math.ceil(((temp * 1.8) + 32) + padding)
             console.log(`${fahrenheit}°F`)
 
             resolve(fahrenheit)
